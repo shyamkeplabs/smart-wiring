@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="160" viewBox="0 0 240 160">
+<defs>
+  <linearGradient id="shadow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity="0.22"/><stop offset="1" stop-color="#000" stop-opacity="0"/></linearGradient>
+  <filter id="ds" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="7" stdDeviation="7" flood-opacity="0.22"/></filter>
+  <linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f9fbff"/><stop offset="1" stop-color="#dbe3ec"/></linearGradient>
+  <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f5f7f9"/><stop offset="0.45" stop-color="#b9c3cd"/><stop offset="1" stop-color="#f8fafc"/></linearGradient>
+</defs>
+
+<g filter="url(#ds)">
+  <rect x="68" y="44" width="104" height="72" rx="21" fill="#7d8790"/>
+  <rect x="73" y="49" width="94" height="62" rx="18" fill="#b6bec6"/>
+  <ellipse cx="120" cy="80" rx="29" ry="25" fill="#56626d"/>
+  <ellipse cx="120" cy="80" rx="19" ry="17" fill="#2b333b"/>
+  <circle cx="120" cy="80" r="8" fill="#c3ccd4"/>
+  <path d="M120 80 L164 80" stroke="#9aa6b0" stroke-width="4"/>
+  <path d="M164 80 L177 74 L177 86 Z" fill="#b7c1ca"/>
+  <rect x="88" y="112" width="12" height="10" rx="3" fill="#9c6b4d"/>
+  <rect x="140" y="112" width="12" height="10" rx="3" fill="#9c6b4d"/>
+</g>
+<text x="120" y="25" text-anchor="middle" fill="#697785" font-family="Arial" font-size="10" font-weight="700">DC MOTOR</text>
+
+</svg>

@@ -1,0 +1,124 @@
+{
+  "nodes": [
+    {
+      "id": "battery-1",
+      "type": "circuit",
+      "data": {
+        "kind": "battery",
+        "label": "BAT1",
+        "properties": {
+          "voltage": 9
+        }
+      }
+    },
+    {
+      "id": "switch-1",
+      "type": "circuit",
+      "data": {
+        "kind": "switch",
+        "label": "SW1",
+        "properties": {
+          "closed": true
+        }
+      }
+    },
+    {
+      "id": "resistor-1",
+      "type": "circuit",
+      "data": {
+        "kind": "resistor",
+        "label": "R1",
+        "properties": {
+          "resistance": 470
+        }
+      }
+    },
+    {
+      "id": "led-1",
+      "type": "circuit",
+      "data": {
+        "kind": "led",
+        "label": "LED1",
+        "properties": {
+          "forwardVoltage": 2,
+          "maxCurrent": 0.02,
+          "onResistance": 5
+        }
+      }
+    },
+    {
+      "id": "motor-1",
+      "type": "circuit",
+      "data": {
+        "kind": "motor",
+        "label": "M1",
+        "properties": {
+          "resistance": 30,
+          "maxCurrent": 0.35
+        }
+      }
+    },
+    {
+      "id": "gnd-1",
+      "type": "circuit",
+      "data": {
+        "kind": "ground",
+        "label": "GND",
+        "properties": {
+          "voltage": 0
+        }
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "w1",
+      "source": "battery-1",
+      "sourceHandle": "pos",
+      "target": "switch-1",
+      "targetHandle": "in"
+    },
+    {
+      "id": "w2",
+      "source": "switch-1",
+      "sourceHandle": "out",
+      "target": "resistor-1",
+      "targetHandle": "in"
+    },
+    {
+      "id": "w3",
+      "source": "resistor-1",
+      "sourceHandle": "out",
+      "target": "led-1",
+      "targetHandle": "in"
+    },
+    {
+      "id": "w4",
+      "source": "led-1",
+      "sourceHandle": "out",
+      "target": "gnd-1",
+      "targetHandle": "gnd"
+    },
+    {
+      "id": "w5",
+      "source": "battery-1",
+      "sourceHandle": "neg",
+      "target": "gnd-1",
+      "targetHandle": "gnd"
+    },
+    {
+      "id": "w6",
+      "source": "switch-1",
+      "sourceHandle": "out",
+      "target": "motor-1",
+      "targetHandle": "in"
+    },
+    {
+      "id": "w7",
+      "source": "motor-1",
+      "sourceHandle": "out",
+      "target": "gnd-1",
+      "targetHandle": "gnd"
+    }
+  ]
+}

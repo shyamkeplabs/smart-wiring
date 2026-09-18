@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="160" viewBox="0 0 240 160">
+<defs>
+  <linearGradient id="shadow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity="0.22"/><stop offset="1" stop-color="#000" stop-opacity="0"/></linearGradient>
+  <filter id="ds" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="7" stdDeviation="7" flood-opacity="0.22"/></filter>
+  <linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f9fbff"/><stop offset="1" stop-color="#dbe3ec"/></linearGradient>
+  <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f5f7f9"/><stop offset="0.45" stop-color="#b9c3cd"/><stop offset="1" stop-color="#f8fafc"/></linearGradient>
+</defs>
+
+<g filter="url(#ds)">
+  <path d="M116 128 V98 M124 128 V98" stroke="#9aa5af" stroke-width="4"/>
+  <path d="M100 78 C100 58 140 58 140 78 C140 91 133 99 120 99 C107 99 100 91 100 78Z" fill="#cf2f37" stroke="#8f1e24" stroke-width="2"/>
+  <path d="M102 74 C105 61 115 57 124 60 C132 62 137 68 138 75 C129 71 115 67 102 74Z" fill="#f25f67" opacity="0.8"/>
+  <path d="M105 78 C108 72 113 68 119 67" stroke="#fff" stroke-opacity="0.7" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="120" cy="85" r="4" fill="#ffbdc1" opacity="0.9"/>
+</g>
+<text x="120" y="23" text-anchor="middle" fill="#697785" font-family="Arial" font-size="10" font-weight="700">LED  •  2.0 V</text>
+
+</svg>
