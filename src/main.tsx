@@ -9,7 +9,6 @@ import {
   EdgeChange,
   EdgeProps,
   Handle,
-  MiniMap,
   Node,
   NodeChange,
   NodeProps,
@@ -843,7 +842,7 @@ function App() {
       <header className="topbar">
         <div className="brand-block"><div className="brand-mark"><CircuitBoard size={20} /></div><div><div className="brand-title">KLS Studio</div><div className="brand-subtitle">Design · Simulate · Learn</div></div></div>
         <div className="global-search"><Search size={18} /><input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search components..." /><kbd>Ctrl K</kbd></div>
-        <div className="top-actions"><button className="icon-btn" onClick={() => setDark((value) => !value)} title="Toggle theme">{dark ? <Sun size={18} /> : <Moon size={18} />}</button><button className={`simulate-btn ${simulate ? 'active' : ''}`} onClick={toggleSimulation}><Zap size={17} /> {simulate ? 'STOP' : 'SIMULATE'}</button><button className="icon-btn" onClick={saveDesign}><Save size={18} /></button><button className="icon-btn" onClick={undo} disabled={!past.length}><Undo2 size={18} /></button><button className="icon-btn" onClick={redo} disabled={!future.length}><Redo2 size={18} /></button><div className="user-chip"><div className="avatar">RK</div><div><strong>Ravi Kumar</strong><span>STUDENT</span></div></div></div>
+        <div className="top-actions"><button className="icon-btn" onClick={() => setDark((value) => !value)} title="Toggle theme">{dark ? <Sun size={18} /> : <Moon size={18} />}</button><button className={`simulate-btn ${simulate ? 'active' : ''}`} onClick={toggleSimulation}><Zap size={17} /> {simulate ? 'STOP' : 'SIMULATE'}</button><button className="icon-btn" onClick={saveDesign}><Save size={18} /></button><button className="icon-btn" onClick={undo} disabled={!past.length}><Undo2 size={18} /></button><button className="icon-btn" onClick={redo} disabled={!future.length}><Redo2 size={18} /></button><div className="user-chip"><div className="avatar">RK</div><div><strong>SHYAM CHENI</strong><span>STUDENT</span></div></div></div>
       </header>
 
       <div className="workspace">
@@ -865,7 +864,7 @@ function App() {
               onNodeDragStop={() => { if (dragSnapshot.current) { setPast((current) => [...current.slice(-39), dragSnapshot.current!]); setFuture([]); dragSnapshot.current = null; } }}
               fitView snapToGrid snapGrid={[20, 20]} connectionMode="loose" defaultEdgeOptions={{ type: 'wire' }} connectionLineStyle={{ stroke: '#0ea5e9', strokeWidth: 3 }} panOnScroll zoomOnPinch zoomOnDoubleClick={false} proOptions={{ hideAttribution: true }} deleteKeyCode={null}
             >
-              <Background gap={20} size={1} color={dark ? '#243448' : '#dbe5ef'} /><Controls position="bottom-center" showInteractive={false} /><MiniMap position="bottom-right" nodeColor={(node) => node.data?.kind === 'junction' ? '#f59e0b' : '#b8c8d8'} maskColor={dark ? '#09111ecc' : '#eef4f9dd'} />
+              <Background gap={20} size={1} color={dark ? '#243448' : '#dbe5ef'} /><Controls position="bottom-center" showInteractive={false} />
             </ReactFlow>
             <div className="smart-badge"><Wand2 size={15} /><b>{wireModeLabel(wireMode)}</b><span>routing</span><i>•</i><span>{wireMode === 'smart' ? 'obstacle-aware' : wireButtons.find((item) => item.id === wireMode)?.hint}</span><i>•</i><span>snap to pin</span></div>
             <div className="canvas-hint"><Sparkles size={16} /><div><strong>Wiring Copilot</strong><span>Click a wire for Tinkercad-style edit dots. Drag a dot to reshape, double-click to add a bend, or use Junction mode to branch at a terminal.</span></div></div>
